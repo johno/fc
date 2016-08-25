@@ -20,12 +20,24 @@ module.exports = (state, prev, send) => html`
                 </div>
               </div>
             </div>
-            <div class='bg-white pa3'>
-              <p class='f5 b mv0'>Bridger Bowl</p>
-              <p class='f6 mid-gray mv0'>Bozeman, MT</p>
+            <div class='cf bg-white pa3'>
+              <div class='fl-m fl-l'>
+                <p class='f5 b mv0'>Bridger Bowl</p>
+                <p class='f6 mid-gray mv0'>Bozeman, MT</p>
+              </div>
+              <div class='fr-m fr-l ba b--light-gray br2'>
+                <p class='f6 mid-gray b mv0 pa2 tc tl-m tl-l'>
+                  <span class='pa2 pr3'>
+                    7° F
+                  </span>
+                  <span class='bl b--light-gray pl3 pa2'>
+                    Sunny
+                  </span>
+                </p>
+              </div>
             </div>
 					</div>
-					<div class='fl w-40 ph2'>
+					<div class='fl w-40 pl2'>
             <div class='ba b--light-gray'>
               <div class='h5' style='background: url(/assets/bridger-bowl.jpg) no-repeat; background-size: cover'>
                 <div class='cf white'>
