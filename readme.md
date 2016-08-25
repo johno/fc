@@ -7,6 +7,7 @@ First Chair is a quick and nimble snow tracking app for resorts and snotel sites
 - choo
 - tachyons
 - micro
+- cxs
 - server side rendering
 - async js
 - svgs
