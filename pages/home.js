@@ -13,17 +13,19 @@ module.exports = (state, prev, send) => html`
 				<h3 class='f5 ttu tracked normal'>Featured</h3>
 				<div class='cf'>
 					<div class='fl w-60 ba b--light-gray'>
-            <div class='h5' style='background: url(/assets/bridger-bowl.jpg) no-repeat; background-size: cover'>
+            <div class='h5 bg-navy'>
               <div class='cf white'>
                 <div class='tr'>
-                  <p class='f1 b pb2 mv0 pa3 bg-black-90 dib'>3"</p>
+                  <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
                 </div>
               </div>
             </div>
             <div class='cf bg-white pa3'>
               <div class='fl-m fl-l'>
-                <p class='f5 b mv0'>Bridger Bowl</p>
-                <p class='f6 mid-gray mv0'>Bozeman, MT</p>
+                <a href='/resorts/bridger-bowl' class='link'>
+                  <p class='f5 b mv0'>Bridger Bowl</p>
+                  <p class='f6 mid-gray mv0'>Bozeman, MT</p>
+                </a>
               </div>
               <div class='fr-m fr-l ba b--light-gray br2'>
                 <p class='f6 mid-gray b mv0 pa2 tc tl-m tl-l'>
@@ -39,10 +41,10 @@ module.exports = (state, prev, send) => html`
 					</div>
 					<div class='fl w-40 pl2'>
             <div class='ba b--light-gray'>
-              <div class='h5' style='background: url(/assets/bridger-bowl.jpg) no-repeat; background-size: cover'>
+              <div class='h5 bg-dark-blue'>
                 <div class='cf white'>
                   <div class='tr'>
-                    <p class='f1 b pb2 mv0 pa3 bg-black-90 dib'>3"</p>
+                    <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
                   </div>
                 </div>
               </div>
@@ -56,10 +58,10 @@ module.exports = (state, prev, send) => html`
         <div class='cf pt2'>
 					<div class='fl w-33 pr2'>
             <div class='ba b--light-gray'>
-              <div class='h5' style='background: url(/assets/bridger-bowl.jpg) no-repeat; background-size: cover'>
+              <div class='h5 bg-blue'>
                 <div class='cf white'>
                   <div class='tr'>
-                    <p class='f1 b pb2 mv0 pa3 bg-black-90 dib'>3"</p>
+                    <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
                   </div>
                 </div>
               </div>
@@ -70,29 +72,29 @@ module.exports = (state, prev, send) => html`
             </div>
           </div>
           <div class='fl w-33 pr2'>
-            <div class='ba b--light-gray'>
-              <div class='h5' style='background: url(/assets/bridger-bowl.jpg) no-repeat; background-size: cover'>
-                <div class='cf white'>
+            <div>
+              <div class='h5 bg-light-blue'>
+                <div class='cf black'>
                   <div class='tr'>
-                    <p class='f1 b pb2 mv0 pa3 bg-black-90 dib'>3"</p>
+                    <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
                   </div>
                 </div>
               </div>
-              <div class='bg-white pa3'>
+              <div class='bg-white pa3 ba b--light-gray'>
                 <p class='f5 b mv0'>Bridger Bowl</p>
                 <p class='f6 mid-gray mv0'>Bozeman, MT</p>
               </div>
             </div>
 					</div>
-					<div class='fl w-34 ba b--light-gray'>
-            <div class='h5' style='background: url(/assets/bridger-bowl.jpg) no-repeat; background-size: cover'>
-              <div class='cf white'>
+					<div class='fl w-34'>
+            <div class='h5 bg-lightest-blue'>
+              <div class='cf black'>
                 <div class='tr'>
-                  <p class='f1 b pb2 mv0 pa3 bg-black-90 dib'>3"</p>
+                  <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
                 </div>
               </div>
             </div>
-            <div class='bg-white pa3'>
+            <div class='bg-white pa3 ba b--light-gray'>
               <p class='f5 b mv0'>Bridger Bowl</p>
               <p class='f6 mid-gray mv0'>Bozeman, MT</p>
             </div>
