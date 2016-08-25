@@ -1,0 +1,4 @@
+projectName: fc
+template:
+  name: choo-cli
+  source: choo-cli
