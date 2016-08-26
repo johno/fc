@@ -7,12 +7,28 @@ First Chair is a quick and nimble snow tracking app for resorts and snotel sites
 - choo
 - tachyons
 - micro
-- cxs
+- uncss
+- html entity logo
 - server side rendering
-- async js
 - svgs
+- lazily loaded, async js (but not required)
 - async images (if js is supported)
-- spa that supports noscript
+
+#### Optional, progressive assets and enhancements
+
+Everything that is needed for a great user experience is server rendered.
+This allows a user to even use this application without javascript enabled.
+When clicking links, they're simply forwarded to the next server rendered page.
+All the things are minified and gzipped, too.
+
+##### If javascript _is_ enabled, we turn it up a notch
+
+Firstly, a tiny javascript is executed to grab the single page application js that was used to render the app on the server.
+That js is then appended to the dom and executed.
+This takes over navigation, only updating parts of the dom that have changed and fetching api requests in the background.
+Additionally, the js begins to lazy load images and pop them into place.
+These images are only shown lazily and if js is available.
+They greatly improve the ux of First Chair, but are heavy and unneeded for a satisfactory experience.
 
 #### Server
 
