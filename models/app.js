@@ -1,15 +1,8 @@
+const resorts = require('../resorts.json')
+
 module.exports = {
   state: {
-    resorts: [{
-      "slug": "bridger-bowl",
-      "name": "Bridger Bowl",
-      "city": "Bozeman",
-      "state": "Montana",
-      "snowfall24": "3",
-      "snowfall72": "8",
-      "temp": "7",
-      "weather": "Sunny"
-      }]
+    resorts: resorts
   },
   reducers: {
     /* synchronous operations that modify state. Triggered by actions. Signature of (data, state). */

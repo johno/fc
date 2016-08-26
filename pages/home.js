@@ -1,7 +1,9 @@
 const html = require('choo/html')
 
 module.exports = (state, prev, send) => {
+  console.log(state)
   const featuredResort = state.resorts[0]
+  console.log(featuredResort)
 
   return html`
     <main>

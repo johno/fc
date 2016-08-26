@@ -4,7 +4,7 @@ const fs = require('fs')
 const zlib = require('zlib')
 
 const js = fs.readFileSync('dist/index.js', 'utf8')
-const state = require('./resorts.json')
+const state = { resorts: require('./resorts.json') }
 
 module.exports = async function (req, res) {
   console.log(req.url)

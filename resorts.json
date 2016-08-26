@@ -5,6 +5,8 @@
   "state": "Montana",
   "snowfall24": "3",
   "snowfall72": "8",
+  "temp": "7",
+  "weather": "Sunny",
   "week_snowfall_graph": [{
     "x": 0,
     "y": 0
