@@ -1,7 +1,15 @@
 module.exports = {
   state: {
-    /* initial values of state inside the model */
-    // title: 'Set the title'
+    resorts: [{
+      "slug": "bridger-bowl",
+      "name": "Bridger Bowl",
+      "city": "Bozeman",
+      "state": "Montana",
+      "snowfall24": "3",
+      "snowfall72": "8",
+      "temp": "7",
+      "weather": "Sunny"
+      }]
   },
   reducers: {
     /* synchronous operations that modify state. Triggered by actions. Signature of (data, state). */
