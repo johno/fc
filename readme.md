@@ -10,6 +10,7 @@ First Chair is a quick and nimble snow tracking app for resorts and snotel sites
 - uncss
 - html entity logo
 - server side rendering
+- rehydration (shoutout to [dat.land](https://github.com/datproject/dat.land/blob/master/client/js/models/app-rehydrator.js))
 - svgs
 - lazily loaded, async js (but not required)
 - async images (if js is supported)
