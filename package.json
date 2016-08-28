@@ -5,9 +5,11 @@
   "scripts": {
     "start": "budo ./client.js --pushstate --open -- -g es2040",
     "lint": "standard --verbose | snazzy",
-    "preserve": "npm run build",
-    "serve": "micro -p 3000 server.js",
-    "build": "mkdir -p dist && NODE_ENV=production browserify client.js -t envify -g unassertify -g yo-yoify -g es2040 -g uglifyify -p bundle-collapser/plugin > dist/index.js",
+    "preserve": "NODE_ENV=production npm run build",
+    "preserve:dev": "npm run build",
+    "serve": "NODE_ENV=production micro -p 3000 server.js",
+    "serve:dev": "micro -p 3000 server.js",
+    "build": "mkdir -p dist && browserify client.js -t envify -g unassertify -g yo-yoify -g es2040 -g uglifyify -p bundle-collapser/plugin > dist/index.js",
     "test": "npm run lint"
   },
   "dependencies": {
@@ -24,6 +26,7 @@
     "standard": "^8.0.0",
     "uglifyify": "^3.0.2",
     "unassertify": "^2.0.3",
+    "uncss": "^0.14.1",
     "yo-yoify": "^3.4.1"
   },
   "standard": {

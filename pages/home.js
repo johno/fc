@@ -5,7 +5,6 @@ module.exports = (state, prev, send) => {
 
   return html`
     <main>
-      <link rel='stylesheet' href='https://npmcdn.com/tachyons@4.1.1/css/tachyons.min.css'/>
       <header class='tc pv2 pv4-m pv4-l bb b--light-gray'>
         <span class='f-subheadline mid-gray'>≙</span>
         <h1 class='f3 mid-gray'>First Chair</h1>

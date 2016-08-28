@@ -1,5 +1,4 @@
-# generated gitignore file
-
+tmp
 *.swp
 
 # Logs
