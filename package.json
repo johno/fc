@@ -24,6 +24,7 @@
     "standard": "^8.0.0",
     "uglifyify": "^3.0.2",
     "unassertify": "^2.0.3",
+    "uncss": "^0.14.1",
     "yo-yoify": "^3.4.1"
   },
   "standard": {

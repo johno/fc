@@ -3,13 +3,17 @@ const app = require('./app')
 const fs = require('fs')
 const zlib = require('zlib')
 
+const isProd = process.env.NODE_ENV === 'production'
+const cssFile = isProd ? 'assets/tachyons.un.css' : 'assets/tachyons.min.css'
+
 const js = fs.readFileSync('dist/index.js', 'utf8')
+const css = fs.readFileSync(cssFile, 'utf8')
 const state = { resorts: require('./resorts.json') }
 
 module.exports = async function (req, res) {
   console.log(req.url)
 
-  if (req.url === '/index.js') {
+  if (req.url === '/i.js') {
     res.setHeader('Content-Encoding', 'gzip')
     res.setHeader('Content-Type', 'application/javascript')
     res.writeHead(200)
@@ -23,8 +27,19 @@ module.exports = async function (req, res) {
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     res.writeHead(200)
 
-    const html = `<div id="ssr">${app.toString(req.url, state)}</div><script async src="index.js"></script>`
+    const appHtml = html(app.toString(req.url, state), css)
 
-    res.end(zlib.gzipSync(html))
+    res.end(zlib.gzipSync(appHtml))
   }
 }
+
+const html = (app, css) => (`
+  <!DOCTYPE html>
+  <head>
+    <title>First Chair</title>
+    <style>${css}</style>
+  </head>
+  <body>
+    <div id="ssr">${app}</div>
+    <script async src="/i.js"></script>
+`)
