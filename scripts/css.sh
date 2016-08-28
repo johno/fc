@@ -1,5 +1,6 @@
 mkdir -p tmp
 
-assets/tachyons.min.css
+curl http://localhost:3000 | gunzip > tmp/index.html
+curl http://localhost:3000/resorts/bridger-bowl | gunzip > tmp/resort-page.html
 
-uncss http://localhost:3000, http://localhost:3000/resorts/bridger-bowl > assets/tachyons.un.css
+uncss -H assets/ tmp/*.html > assets/tachyons.un.css

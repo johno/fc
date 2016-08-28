@@ -19,6 +19,12 @@ module.exports = async function (req, res) {
     res.writeHead(200)
 
     res.end(zlib.gzipSync(js))
+  } else if(req.url === '/tachyons.min.css') {
+    res.setHeader('Content-Encoding', 'gzip')
+    res.setHeader('Content-Type', 'text/css')
+    res.writeHead(200)
+
+    res.end(zlib.gzip(css))
   } else if (req.url === '/resorts.json') {
     res.setHeader('Content-Type', 'application/json; charset=utf-8')
     send(res, 200, state)
@@ -37,7 +43,7 @@ const html = (app, css) => (`
   <!DOCTYPE html>
   <head>
     <title>First Chair</title>
-    <style>${css}</style>
+    ${isProd ? `<style>${css}</style>` : `<link href="/tachyons.min.css" rel="stylesheet" />`}
   </head>
   <body>
     <div id="ssr">${app}</div>
