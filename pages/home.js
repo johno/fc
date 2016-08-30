@@ -1,5 +1,7 @@
 const html = require('choo/html')
 
+const resortTile = require('../elements/resort-tile')
+
 module.exports = (state, prev, send) => {
   const featuredResort = state.resorts[0] || {}
 
@@ -14,95 +16,13 @@ module.exports = (state, prev, send) => {
         <div class='pa2 mw8 center'>
           <h3 class='f5 ttu tracked normal'>Featured</h3>
           <div class='cf'>
-            <div class='fl w-60 ba b--light-gray'>
-              <div class='h5 bg-navy' async-img='/assets/bridger-bowl.jpg'>
-                <div class='cf white'>
-                  <div class='tr'>
-                    <p class='f-subheadline b pb2 mv0 pa3'>
-                      ${featuredResort.snowfall24}"
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class='cf bg-white pa3'>
-                <div class='fl-m fl-l'>
-                  <a href='/resorts/bridger-bowl' class='link'>
-                    <p class='f5 b mv0'>${featuredResort.name}</p>
-                    <p class='f6 mid-gray mv0'>${featuredResort.city}, ${featuredResort.state}</p>
-                  </a>
-                </div>
-                <div class='fr-m fr-l ba b--light-gray br2'>
-                  <p class='f6 mid-gray b mv0 pa2 tc tl-m tl-l'>
-                    <span class='pa2 pr3'>
-                      ${featuredResort.temp}° F
-                    </span>
-                    <span class='bl b--light-gray pl3 pa2'>
-                      ${featuredResort.weather}
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class='fl w-40 pl2'>
-              <div class='ba b--light-gray'>
-                <div class='h5 bg-dark-blue'>
-                  <div class='cf white'>
-                    <div class='tr'>
-                      <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
-                    </div>
-                  </div>
-                </div>
-                <div class='bg-white pa3'>
-                  <p class='f5 b mv0'>Bridger Bowl</p>
-                  <p class='f6 mid-gray mv0'>Bozeman, MT</p>
-                </div>
-              </div>
-            </div>
+            ${resortTile(featuredResort, { width: 60 })}
+            ${resortTile(featuredResort, { width: 40, color: 'dark-blue', cx: 'pl2' })}
           </div>
           <div class='cf pt2'>
-            <div class='fl w-33 pr2'>
-              <div class='ba b--light-gray'>
-                <div class='h5 bg-blue'>
-                  <div class='cf white'>
-                    <div class='tr'>
-                      <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
-                    </div>
-                  </div>
-                </div>
-                <div class='bg-white pa3'>
-                  <p class='f5 b mv0'>Bridger Bowl</p>
-                  <p class='f6 mid-gray mv0'>Bozeman, MT</p>
-                </div>
-              </div>
-            </div>
-            <div class='fl w-33 pr2'>
-              <div>
-                <div class='h5 bg-light-blue'>
-                  <div class='cf black'>
-                    <div class='tr'>
-                      <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
-                    </div>
-                  </div>
-                </div>
-                <div class='bg-white pa3 ba b--light-gray'>
-                  <p class='f5 b mv0'>Bridger Bowl</p>
-                  <p class='f6 mid-gray mv0'>Bozeman, MT</p>
-                </div>
-              </div>
-            </div>
-            <div class='fl w-34'>
-              <div class='h5 bg-lightest-blue'>
-                <div class='cf black'>
-                  <div class='tr'>
-                    <p class='f-subheadline b pb2 mv0 pa3'>3"</p>
-                  </div>
-                </div>
-              </div>
-              <div class='bg-white pa3 ba b--light-gray'>
-                <p class='f5 b mv0'>Bridger Bowl</p>
-                <p class='f6 mid-gray mv0'>Bozeman, MT</p>
-              </div>
-            </div>
+            ${resortTile(featuredResort, { width: 33, color: 'blue' })}
+            ${resortTile(featuredResort, { width: 33, color: 'light-blue', cx: 'pl2'})}
+            ${resortTile(featuredResort, { width: 34, color: 'lightest-blue', cx: 'pl2' })}
           </div>
         </div>
       </div>
