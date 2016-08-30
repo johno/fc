@@ -1,7 +1,7 @@
 const html = require('choo/html')
 
 module.exports = (state, prev, send) => {
-  const featuredResort = state.resorts[0]
+  const featuredResort = state.resorts[0] || {}
 
   return html`
     <main>
@@ -15,7 +15,7 @@ module.exports = (state, prev, send) => {
           <h3 class='f5 ttu tracked normal'>Featured</h3>
           <div class='cf'>
             <div class='fl w-60 ba b--light-gray'>
-              <div class='h5 bg-navy'>
+              <div class='h5 bg-navy' async-img='/assets/bridger-bowl.jpg'>
                 <div class='cf white'>
                   <div class='tr'>
                     <p class='f-subheadline b pb2 mv0 pa3'>

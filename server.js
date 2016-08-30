@@ -10,6 +10,8 @@ const js = fs.readFileSync('dist/index.js', 'utf8')
 const css = fs.readFileSync(cssFile, 'utf8')
 const state = { resorts: require('./resorts.json') }
 
+const bbImg = fs.readFileSync('assets/bridger-bowl.jpg')
+
 module.exports = async function (req, res) {
   console.log(req.url)
 
@@ -19,6 +21,11 @@ module.exports = async function (req, res) {
     res.writeHead(200)
 
     res.end(zlib.gzipSync(js))
+  } else if(req.url === '/bridger-bowl.jpg') {
+    res.setHeader('Content-Type', 'image/jpg')
+    res.writeHead(200)
+
+    res.end(bbImg)
   } else if(req.url === '/tachyons.min.css') {
     res.setHeader('Content-Encoding', 'gzip')
     res.setHeader('Content-Type', 'text/css')
@@ -33,13 +40,13 @@ module.exports = async function (req, res) {
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     res.writeHead(200)
 
-    const appHtml = html(app.toString(req.url, state), css)
+    const appHtml = html(app.toString(req.url, state), state, css)
 
     res.end(zlib.gzipSync(appHtml))
   }
 }
 
-const html = (app, css) => (`
+const html = (app, state, css) => (`
   <!DOCTYPE html>
   <head>
     <title>First Chair</title>
@@ -47,6 +54,23 @@ const html = (app, css) => (`
   </head>
   <body>
     <div id="ssr">${app}</div>
+    ${jsScript()}
+    <script>
+      window.rehydrationState = ${JSON.stringify(state)}
+
+      const asyncImgs = [].slice.call(document.querySelectorAll('[async-img]'))
+
+      asyncImgs.forEach(el => {
+        console.log(el)
+        const src = el.getAttribute('async-img')
+        el.style = 'background: url(' + src + ') cover cover'
+      })
+    </script>
+`)
+
+const jsScript = () => {
+  if (isProd) {
+    return `
     <script async async-js-src="/i.js"></script>
     <script>
       const jsScripts = [].slice.call(document.querySelectorAll('[async-js-src]'))
@@ -56,4 +80,8 @@ const html = (app, css) => (`
         document.body.appendChild(tag)
       })
     </script>
-`)
+    `
+  } else {
+    return '<script async src="/i.js"></script>'
+  }
+}

@@ -1,13 +1,12 @@
-const resorts = require('../resorts.json')
-
 module.exports = {
   state: {
-    resorts: resorts
+    resorts: []
   },
+
   reducers: {
-    /* synchronous operations that modify state. Triggered by actions. Signature of (data, state). */
-    update: (action, state) => ({ title: action.value })
+    update: (action, state) => ({ resorts: action })
   },
+
   effects: {
     // asynchronous operations that don't modify state directly.
     // Triggered by actions, can call actions. Signature of (data, state, send, done)
@@ -17,14 +16,13 @@ module.exports = {
     }
     */
   },
+
   subscriptions: [
-    // asynchronous read-only operations that don't modify state directly.
-    // Can call actions. Signature of (send, done).
-    /*
-    (send, done) => {
-      // do stuff
+    send => {
+      if (!window.rehydrationState) return
+      const resorts = window.rehydrationState.resorts
+      send('update', resorts, err => err && console.error(err))
     }
-    */
   ]
 }
 
