@@ -24,7 +24,7 @@ module.exports = async function (req, res) {
     res.setHeader('Content-Type', 'text/css')
     res.writeHead(200)
 
-    res.end(zlib.gzip(css))
+    res.end(zlib.gzipSync(css))
   } else if (req.url === '/resorts.json') {
     res.setHeader('Content-Type', 'application/json; charset=utf-8')
     send(res, 200, state)
@@ -47,5 +47,13 @@ const html = (app, css) => (`
   </head>
   <body>
     <div id="ssr">${app}</div>
-    <script async src="/i.js"></script>
+    <script async async-js-src="/i.js"></script>
+    <script>
+      const jsScripts = [].slice.call(document.querySelectorAll('[async-js-src]'))
+      jsScripts.forEach(el => {
+        const tag = document.createElement('script')
+        tag.src = el.getAttribute('async-js-src')
+        document.body.appendChild(tag)
+      })
+    </script>
 `)
