@@ -22,10 +22,11 @@ module.exports = async function (req, res) {
 
     res.end(zlib.gzipSync(js))
   } else if(req.url === '/bridger-bowl.jpg') {
+    res.setHeader('Content-Encoding', 'gzip')
     res.setHeader('Content-Type', 'image/jpg')
     res.writeHead(200)
 
-    res.end(bbImg)
+    res.end(zlib.gzipSync(bbImg))
   } else if(req.url === '/tachyons.min.css') {
     res.setHeader('Content-Encoding', 'gzip')
     res.setHeader('Content-Type', 'text/css')
@@ -58,13 +59,13 @@ const html = (app, state, css) => (`
     <script>
       window.rehydrationState = ${JSON.stringify(state)}
 
-      const asyncImgs = [].slice.call(document.querySelectorAll('[async-img]'))
+      window.asyncImg = () => {
+        const asyncImgs = [].slice.call(document.querySelectorAll('[async-img]'))
 
-      asyncImgs.forEach(el => {
-        console.log(el)
-        const src = el.getAttribute('async-img')
-        el.style = 'background: url(' + src + ') cover cover'
-      })
+        asyncImgs.forEach(el => {
+          el.style = 'background: url(' + el.getAttribute('async-img') + ') no-repeat; background-size: cover;'
+        })
+      }
     </script>
 `)
 

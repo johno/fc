@@ -10,7 +10,7 @@ module.exports = (resort, { width, color, cx }) => {
   return html`
     <div class='fl-m fl-l ${widthCx} ${cx}'>
       <div class='ba b--light-gray'>
-        <div class='h5 bg-${color}' async-img='/assets/${resort.slug}.jpg'>
+        <div class='h5 bg-${color}' async-img='/${resort.slug}.jpg'>
           <div class='cf tr'>
             <p class='f-subheadline b bg-black-90 dib white pb2 mv0 pa3'>
               ${resort.snowfall24}"
@@ -36,6 +36,7 @@ module.exports = (resort, { width, color, cx }) => {
           </div>
         </div>
       </div>
+      <script>${resort.slug && 'if (window.asyncImg) window.asyncImg()'}</script>
     </div>
   `
 }
