@@ -10,8 +10,6 @@ const js = fs.readFileSync('dist/index.js', 'utf8')
 const css = fs.readFileSync(cssFile, 'utf8')
 const state = { resorts: require('./resorts.json') }
 
-const bbImg = fs.readFileSync('assets/bridger-bowl.jpg')
-
 module.exports = async function (req, res) {
   console.log(req.url)
 
@@ -21,12 +19,12 @@ module.exports = async function (req, res) {
     res.writeHead(200)
 
     res.end(zlib.gzipSync(js))
-  } else if(req.url === '/bridger-bowl.jpg') {
+  } else if(/\.jpg$/.test(req.url)) {
     res.setHeader('Content-Encoding', 'gzip')
     res.setHeader('Content-Type', 'image/jpg')
     res.writeHead(200)
 
-    res.end(zlib.gzipSync(bbImg))
+    res.end(zlib.gzipSync(fs.readFileSync(`assets${req.url}`)))
   } else if(req.url === '/tachyons.min.css') {
     res.setHeader('Content-Encoding', 'gzip')
     res.setHeader('Content-Type', 'text/css')

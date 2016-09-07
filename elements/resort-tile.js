@@ -1,6 +1,7 @@
 const html = require('choo/html')
 
 module.exports = (resort, { width, color, cx }) => {
+  resort = resort || {}
   width = width || 100
   color = color || 'navy'
   cx = cx || ''

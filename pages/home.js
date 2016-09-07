@@ -3,8 +3,6 @@ const html = require('choo/html')
 const resortTile = require('../elements/resort-tile')
 
 module.exports = (state, prev, send) => {
-  const featuredResort = state.resorts[0] || {}
-
   return html`
     <main>
       <header class='tc pv2 pv4-m pv4-l bb b--light-gray'>
@@ -16,13 +14,13 @@ module.exports = (state, prev, send) => {
         <div class='pa2 mw8 center'>
           <h3 class='f5 ttu tracked normal'>Featured</h3>
           <div class='cf'>
-            ${resortTile(featuredResort, { width: 60 })}
-            ${resortTile(featuredResort, { width: 40, color: 'dark-blue', cx: 'pl2' })}
+            ${resortTile(state.resorts[0], { width: 60 })}
+            ${resortTile(state.resorts[1], { width: 40, color: 'dark-blue', cx: 'pl2' })}
           </div>
           <div class='cf pt2'>
-            ${resortTile(featuredResort, { width: 33, color: 'blue' })}
-            ${resortTile(featuredResort, { width: 33, color: 'light-blue', cx: 'pl2'})}
-            ${resortTile(featuredResort, { width: 34, color: 'lightest-blue', cx: 'pl2' })}
+            ${resortTile(state.resorts[0], { width: 33, color: 'blue' })}
+            ${resortTile(state.resorts[0], { width: 33, color: 'light-blue', cx: 'pl2'})}
+            ${resortTile(state.resorts[0], { width: 34, color: 'lightest-blue', cx: 'pl2' })}
           </div>
         </div>
       </div>

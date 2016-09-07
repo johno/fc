@@ -32,4 +32,38 @@
     "x": 6,
     "y": 3
   }]
+}, {
+  "slug": "big-sky",
+  "name": "Big Sky",
+  "city": "Bozeman",
+  "state": "Montana",
+  "snowfall24": "5",
+  "snowfall72": "9",
+  "temp": "2",
+  "weather": "Mostly Sunny",
+  "week_snowfall_graph": [{
+    "x": 0,
+    "y": 0
+  }, {
+    "x": 1,
+    "y": 0
+  }, {
+    "x": 2,
+    "y": 8
+  }, {
+    "x": 3,
+    "y": 0
+  }, {
+    "x": 4,
+    "y": 0
+  }, {
+    "x": 4,
+    "y": 1
+  }, {
+    "x": 5,
+    "y": 4
+  }, {
+    "x": 6,
+    "y": 3
+  }]
 }]
