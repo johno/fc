@@ -1,14 +1,26 @@
 # ≙ fc
 
+__Work in progress__
+
 First Chair is a quick and nimble snow tracking app for resorts and snotel sites.
+This app is being built as an ongoing experiment with creating a performant and submersive app experience within a browser.
+It is intended to use modern technology while still falling back gracefully for older browsers and others without js runtimes.
+
+Fast. Minimal. Tiny. Accessible.
+
+I hope to have a proof of concept working in time to submit to [10k Apart](https://a-k-apart.com/).
 
 #### Todo
 
-- a11y linting
-- aria attributes
-- add more API endpoints
-- lazy load js
-- lazy load images
+- [] a11y linting
+- [] aria attributes
+- [] resort index page with state filtering
+- [] design resort page
+- [] graph snowfall
+- [] resort search feature
+- [] resort favoriting
+- [X] lazy load js
+- [X] lazy load images
 
 #### Key features to its minimal nature
 
