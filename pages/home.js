@@ -1,5 +1,6 @@
 const html = require('choo/html')
 
+const footer = require('../elements/footer')
 const resortTile = require('../elements/resort-tile')
 
 module.exports = (state, prev, send) => {
@@ -24,9 +25,7 @@ module.exports = (state, prev, send) => {
           </div>
         </div>
       </div>
-      <footer class='bt b--light-gray bg-black-05 pa3 pa6-m pa6-l tc mid-gray'>
-        firstchair.io
-      </footer>
+      ${footer()}
     </main>
   `
 }
