@@ -12,15 +12,15 @@ I hope to have a proof of concept working in time to submit to [10k Apart](https
 
 #### Todo
 
-- [] a11y linting
-- [] aria attributes
-- [] resort index page with state filtering
-- [] design resort page
-- [] graph snowfall
-- [] resort search feature
-- [] resort favoriting
-- [X] lazy load js
-- [X] lazy load images
+-[] a11y linting
+-[] aria attributes
+-[] resort index page with state filtering
+-[] design resort page
+-[] graph snowfall
+-[] resort search feature
+-[] resort favoriting
+-[X] lazy load js
+-[X] lazy load images
 
 #### Key features to its minimal nature
 
