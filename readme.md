@@ -21,6 +21,8 @@ I hope to have a proof of concept working in time to submit to [10k Apart](https
 -[] resort favoriting
 -[X] lazy load js
 -[X] lazy load images
+-[X] uncss
+-[] transition between pages
 
 #### Key features to its minimal nature
 
