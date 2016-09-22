@@ -19,13 +19,13 @@ module.exports = (resort, { width, color, cx }) => {
           </div>
         </div>
         <div class='cf bg-white pa3'>
-          <div class='fl-m fl-l'>
+          <div class='fl-l'>
             <a href='/resorts/${resort.slug}' class='link black'>
               <p class='f5 b mv0'>${resort.name}</p>
               <p class='f6 mid-gray mv0'>${resort.city}, ${resort.state}</p>
             </a>
           </div>
-          <div class='fr-m fr-l ba b--light-gray br2'>
+          <div class='fr-l ba b--light-gray br2'>
             <p class='f6 mid-gray b mv0 pa2 tc tl-m tl-l'>
               <span class='pa2 pr3'>
                 ${resort.temp}° F

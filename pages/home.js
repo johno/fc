@@ -18,9 +18,9 @@ module.exports = (state, prev, send) => {
             ${resortTile(state.resorts[1], { width: 40, color: 'dark-blue', cx: 'pl2' })}
           </div>
           <div class='cf pt2'>
-            ${resortTile(state.resorts[0], { width: 33, color: 'blue' })}
-            ${resortTile(state.resorts[0], { width: 33, color: 'light-blue', cx: 'pl2'})}
-            ${resortTile(state.resorts[0], { width: 34, color: 'lightest-blue', cx: 'pl2' })}
+            ${resortTile(state.resorts[2], { width: 33, color: 'blue' })}
+            ${resortTile(state.resorts[3], { width: 33, color: 'light-blue', cx: 'pl2'})}
+            ${resortTile(state.resorts[4], { width: 34, color: 'lightest-blue', cx: 'pl2' })}
           </div>
         </div>
       </div>

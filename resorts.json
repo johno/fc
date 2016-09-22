@@ -6,32 +6,7 @@
   "snowfall24": "3",
   "snowfall72": "8",
   "temp": "7",
-  "weather": "Sunny",
-  "week_snowfall_graph": [{
-    "x": 0,
-    "y": 0
-  }, {
-    "x": 1,
-    "y": 0
-  }, {
-    "x": 2,
-    "y": 8
-  }, {
-    "x": 3,
-    "y": 0
-  }, {
-    "x": 4,
-    "y": 0
-  }, {
-    "x": 4,
-    "y": 1
-  }, {
-    "x": 5,
-    "y": 4
-  }, {
-    "x": 6,
-    "y": 3
-  }]
+  "weather": "Sunny"
 }, {
   "slug": "big-sky",
   "name": "Big Sky",
@@ -40,30 +15,50 @@
   "snowfall24": "5",
   "snowfall72": "9",
   "temp": "2",
-  "weather": "Mostly Sunny",
-  "week_snowfall_graph": [{
-    "x": 0,
-    "y": 0
-  }, {
-    "x": 1,
-    "y": 0
-  }, {
-    "x": 2,
-    "y": 8
-  }, {
-    "x": 3,
-    "y": 0
-  }, {
-    "x": 4,
-    "y": 0
-  }, {
-    "x": 4,
-    "y": 1
-  }, {
-    "x": 5,
-    "y": 4
-  }, {
-    "x": 6,
-    "y": 3
-  }]
+  "weather": "Mostly Sunny"
+}, {
+  "slug": "aspen-snowmass",
+  "name": "Snowmass",
+  "city": "Aspen",
+  "state": "Colorado",
+  "snowfall24": "4",
+  "snowfall72": "12",
+  "temp": "20",
+  "weather": "Cloudy"
+}, {
+  "slug": "jackson-hole",
+  "name": "Jackson Hole",
+  "city": "Jackson",
+  "state": "Wyoming",
+  "snowfall24": "6",
+  "snowfall72": "18",
+  "temp": "19",
+  "weather": "Snowing"
+}, {
+  "slug": "alta",
+  "name": "Alta",
+  "city": "Alta",
+  "state": "Utah",
+  "snowfall24": "3",
+  "snowfall72": "10",
+  "temp": "24",
+  "weather": "Cloudy"
+}, {
+	"slug": "alyeska",
+	"name": "Alyeska",
+	"city": "Girdwood",
+	"state": "Alaska",
+	"snowfall24": "4",
+	"snowfall72": "6",
+	"temp": "18",
+	"weather": "Fog"
+}, {
+	"slug": "crystal-mountain",
+	"name": "Crystal Mountain",
+	"city": "Crystal Mountain",
+	"state": "Washington",
+	"snowfall24": "2",
+	"snowfall72": "10",
+	"temp": "26",
+	"weather": "Cloudy"
 }]
