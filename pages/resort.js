@@ -24,6 +24,43 @@ module.exports = (state, prev, send) => {
           </div>
         </div>
       </header>
+      <div class='bg-blue white pa3 pa4-m pa5-l'>
+        <div class='tc tl-m tl-l dt-m dt-l w-100'>
+          <div class='dtc v-mid'>
+            <span class='f-subheadline f-headline-m f-headline-l'>☁ ${resort.snowfall24}'</span>
+          </div>
+          <div class='dtc v-mid'>
+            <div class='pv3 pv4-m pv5-l tr'>
+              <dl>
+                <dt>Morning</dt>
+                <dd class='ml0'>${resort.temp}° F</dd>
+              </dl>
+              <dl>
+                <dt>Afternoon</dt>
+                <dd class='ml0'>${resort.temp + 5}</dd>
+              </dl>
+              <dl>
+                <dt>Weather</dt>
+                <dd class='ml0'>${resort.weather}</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='bg-purple white pa3 pa4-m pa5-l'>
+        <div class='tc tl-m tl-l dt-m dt-l w-100'>
+          <div class='dtc v-mid'>
+            <span class='f-subheadline'>☽</span>
+          </div>
+          <div class='dtc v-mid'>
+            <div class='tr'>
+              <p class='f-subheadline'>
+                ☂ ${resort.temp - 12}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   `
 }
