@@ -1,4 +1,5 @@
 const html = require('choo/html')
+const weather = require('emojiweather')
 
 module.exports = (state, prev, send) => {
   const { params } = state
@@ -27,7 +28,7 @@ module.exports = (state, prev, send) => {
       <div class='bg-blue white pa3 pa4-m pa5-l'>
         <div class='tc tl-m tl-l dt-m dt-l w-100'>
           <div class='dtc v-mid'>
-            <span class='f-subheadline f-headline-m f-headline-l'>☁ ${resort.snowfall24}'</span>
+            <span class='f-subheadline f-headline-m f-headline-l'>${weather(resort.weather)} ${resort.snowfall24}'</span>
           </div>
           <div class='dtc v-mid'>
             <div class='pv3 pv4-m pv5-l tr'>
@@ -55,10 +56,17 @@ module.exports = (state, prev, send) => {
           <div class='dtc v-mid'>
             <div class='tr'>
               <p class='f-subheadline'>
-                ☂ ${resort.temp - 12}
+                ${weather(resort.weather)} ${resort.temp - 12}
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class='bg-near-white pa3 pa4-m pa5-l'>
+        <div class='cf'>
+          ♦♢ Rating
+          📍 Location
+          🌐 Website
         </div>
       </div>
     </main>
