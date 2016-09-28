@@ -1,5 +1,5 @@
 const html = require('choo/html')
-const weather = require('emojiweather')
+const item = require('../elements/resort-list-item')
 
 module.exports = (state, prev, send) => {
   const { params } = state
@@ -20,12 +20,11 @@ module.exports = (state, prev, send) => {
           </div>
           <div class='dtc v-mid pl2'>
             <span class='f5 pr1'>${params.state}</span>
-            <span class='gray'>/</span>
           </div>
         </div>
       </header>
-      <ul class='list'>
-        ${resorts.map(r => '<li>' + r.name + '</li>').join('')}
+      <ul class='list pl0 mt0'>
+        ${resorts.map(item)}
       </ul>
     </main>
   `
