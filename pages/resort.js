@@ -17,7 +17,7 @@ module.exports = (state, prev, send) => {
             <span class='gray'>/</span>
           </div>
           <div class='dtc v-mid pl2'>
-            <span class='f5 pr1'>${resort.state}</span>
+            <span class='f5 pr1'><a href='/states/${resort.state.toLowerCase()}' class='black link'>${resort.state}</a></span>
             <span class='gray'>/</span>
           </div>
           <div class='dtc v-mid pl2'>
