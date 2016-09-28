@@ -25,41 +25,38 @@ module.exports = (state, prev, send) => {
           </div>
         </div>
       </header>
-      <div class='bg-blue white pa3 pa4-m pa5-l'>
+      <div class='bg-washed-blue pa3 pa4-m pa5-l'>
         <div class='tc tl-m tl-l dt-m dt-l w-100'>
-          <div class='dtc v-mid'>
-            <span class='f-subheadline f-headline-m f-headline-l'>${weather(resort.weather)} ${resort.snowfall24}'</span>
+          <div class='db dtc-m dtc-l v-mid'>
+            <span class='f-subheadline f-headline-m f-headline-l b'>
+              ${weather(resort.weather)} ${resort.snowfall24}'
+            </span>
           </div>
-          <div class='dtc v-mid'>
-            <div class='pv3 pv4-m pv5-l tr'>
-              <dl>
-                <dt>Morning</dt>
-                <dd class='ml0'>${resort.temp}° F</dd>
-              </dl>
-              <dl>
-                <dt>Afternoon</dt>
-                <dd class='ml0'>${resort.temp + 5}</dd>
-              </dl>
-              <dl>
-                <dt>Weather</dt>
-                <dd class='ml0'>${resort.weather}</dd>
-              </dl>
-            </div>
+          <div class='db dtc-m dtc-l v-mid'>
           </div>
         </div>
       </div>
-      <div class='bg-purple white pa3 pa4-m pa5-l'>
-        <div class='tc tl-m tl-l dt-m dt-l w-100'>
-          <div class='dtc v-mid'>
-            <span class='f-subheadline'>☽</span>
-          </div>
-          <div class='dtc v-mid'>
-            <div class='tr'>
-              <p class='f-subheadline'>
-                ${weather(resort.weather)} ${resort.temp - 12}
-              </p>
-            </div>
-          </div>
+      <div class='cf'>
+        <div class='fl-m fl-l w-50-m w-25-l dark-blue tc'>
+          <p class='ttu mb0 mt5 b'>Bozeman</p>
+          <h6>Montana</h6>
+        </div>
+        <div class='fl-m fl-l w-50-m w-25-l bg-dark-blue white tc'>
+          <p class='f2 mb0'>${weather(resort.weather)}</p>
+          <p class='f1'>${resort.temp}° F</p>
+        </div>
+        <div class='fl-m fl-l w-50-m w-25-l bg-blue white tc'>
+          <p class='f2 mb0'>${weather(resort.weather)}</p>
+          <p class='f1'>${resort.temp}° F</p>
+        </div>
+        <div class='fl-m fl-l w-50-m w-25-l bg-light-blue white tc'>
+          <p class='f2 mb0'>${weather(resort.weather)}</p>
+          <p class='f1'>${resort.temp}° F</p>
+        </div>
+      </div>
+      <div class='pv3 pv4-m pv5-l ph2'>
+        <div class='measure-wide center'>
+          
         </div>
       </div>
       <div class='bg-near-white pa3 pa4-m pa5-l'>
