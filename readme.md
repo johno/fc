@@ -6,6 +6,11 @@ First Chair is a quick and nimble snow tracking app for resorts and snotel sites
 This app is being built as an ongoing experiment with creating a performant and submersive app experience within a browser.
 It is intended to use modern technology while still falling back gracefully for older browsers and others without js runtimes.
 
+Developing for the browser is a unique experience. We're not afforded the convenience of a single "install" like native apps are.
+As a result, I've focused on keeping the initial download of this app to 5KB (gzipped).
+Hypothetically, this ensures that the primary payload for this app fits within a single packet.
+In practice, this requires progressively enhancing the page after load and inlining critical path css.
+
 Fast. Minimal. Tiny. Accessible.
 
 I hope to have a proof of concept working in time to submit to [10k Apart](https://a-k-apart.com/).
@@ -26,7 +31,8 @@ I hope to have a proof of concept working in time to submit to [10k Apart](https
 
 #### Key features to its minimal nature
 
-- choo
+- choo (shoutout to yoshua and contributors)
+- yo-yo
 - tachyons
 - micro
 - uncss
