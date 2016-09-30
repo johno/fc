@@ -6,7 +6,8 @@
   "snowfall24": "3",
   "snowfall72": "8",
   "temp": "7",
-  "weather": "Sunny"
+  "weather": "Sunny",
+  "map": "https://goo.gl/maps/TVW3zoM9qA72"
 }, {
   "slug": "big-sky",
   "name": "Big Sky",
@@ -15,7 +16,8 @@
   "snowfall24": "5",
   "snowfall72": "9",
   "temp": "2",
-  "weather": "Snowing"
+  "weather": "Snowing",
+  "map": "https://goo.gl/maps/kRpBjZYuvY52"
 }, {
   "slug": "aspen-snowmass",
   "name": "Snowmass",
@@ -24,7 +26,8 @@
   "snowfall24": "4",
   "snowfall72": "12",
   "temp": "20",
-  "weather": "Cloudy"
+  "weather": "Cloudy",
+  "map": "https://goo.gl/maps/CKoHFxWwjd82"
 }, {
   "slug": "jackson-hole",
   "name": "Jackson Hole",
@@ -33,7 +36,8 @@
   "snowfall24": "6",
   "snowfall72": "18",
   "temp": "19",
-  "weather": "Snowing"
+  "weather": "Snowing",
+  "map": "https://goo.gl/maps/yjoYdbaNAxm"
 }, {
   "slug": "alta",
   "name": "Alta",
@@ -42,7 +46,8 @@
   "snowfall24": "3",
   "snowfall72": "10",
   "temp": "24",
-  "weather": "Cloudy"
+  "weather": "Cloudy",
+  "map": "https://goo.gl/maps/YKE5PaRQ4G12"
 }, {
 	"slug": "alyeska",
 	"name": "Alyeska",
@@ -51,7 +56,8 @@
 	"snowfall24": "4",
 	"snowfall72": "6",
 	"temp": "18",
-	"weather": "Fog"
+	"weather": "Fog",
+  "map": "https://goo.gl/maps/uaeQf8kMG1s"
 }, {
 	"slug": "crystal-mountain",
 	"name": "Crystal Mountain",
@@ -60,5 +66,6 @@
 	"snowfall24": "2",
 	"snowfall72": "10",
 	"temp": "26",
-	"weather": "Cloudy"
+	"weather": "Cloudy",
+  "map": "https://goo.gl/maps/83DS6Pa8AN62"
 }]

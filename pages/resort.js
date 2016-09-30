@@ -37,20 +37,29 @@ module.exports = (state, prev, send) => {
         </div>
       </div>
       <div class='cf'>
-        <div class='fl-m fl-l w-50-m w-25-l dark-blue tc'>
-          <p class='ttu mb0 mt5 b'>Bozeman</p>
+        <div class='fl-m fl-l w-50-m w-25-l dark-blue tc pv3 pv4-m pv4-l'>
+          <p class='ttu mb0 mt5 b pt3'>Bozeman</p>
           <h6>Montana</h6>
         </div>
-        <div class='fl-m fl-l w-50-m w-25-l bg-dark-blue white tc'>
-          <p class='f2 mb0'>${weather(resort.weather)}</p>
+        <div class='fl-m fl-l w-50-m w-25-l bg-dark-blue white tc pv3 pv4-m pv4-l'>
+          <p class='f2 mb0'>
+            ${weather(resort.weather)}<br>
+            <span class='f5 ttu tracked'>${resort.weather}</span>
+          </p>
           <p class='f1'>${resort.temp}° F</p>
         </div>
-        <div class='fl-m fl-l w-50-m w-25-l bg-blue white tc'>
-          <p class='f2 mb0'>${weather(resort.weather)}</p>
+        <div class='fl-m fl-l w-50-m w-25-l bg-blue white tc pv3 pv4-m pv4-l'>
+          <p class='f2 mb0'>
+            ${weather(resort.weather)}<br>
+            <span class='f5 ttu tracked'>${resort.weather}</span>
+          </p>
           <p class='f1'>${resort.temp}° F</p>
         </div>
-        <div class='fl-m fl-l w-50-m w-25-l bg-light-blue white tc'>
-          <p class='f2 mb0'>${weather(resort.weather)}</p>
+        <div class='fl-m fl-l w-50-m w-25-l bg-light-blue white tc pv3 pv4-m pv4-l'>
+          <p class='f2 mb0'>
+            ${weather(resort.weather)}<br>
+            <span class='f5 ttu tracked'>${resort.weather}</span>
+          </p>
           <p class='f1'>${resort.temp}° F</p>
         </div>
       </div>
