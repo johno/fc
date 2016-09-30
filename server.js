@@ -50,6 +50,7 @@ const html = (app, state, css) => (`
   <!DOCTYPE html>
   <head>
     <title>First Chair</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     ${isProd ? `<style>${css}</style>` : `<link href="/tachyons.min.css" rel="stylesheet" />`}
   </head>
   <body>
