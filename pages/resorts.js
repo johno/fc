@@ -6,12 +6,8 @@ module.exports = (state, prev, send) => {
   const { params } = state
   const selectedState = params.state && params.state.toLowerCase()
 
-  console.log(selectedState)
-  const resorts = state.resorts.filter(r => {
-    return selectedState ? r.state.toLowerCase() === selectedState : true
-  })
+  const resorts = state.resorts.filter(r => selectedState ? r.state.toLowerCase() === selectedState : true)
 
-  console.log(resorts)
   return html`
     <main>
       <header class='pa2 pa3-m pa4-l bb b--light-gray'>

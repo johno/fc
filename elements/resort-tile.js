@@ -6,38 +6,37 @@ module.exports = (resort, { width, color, cx }) => {
   color = color || 'navy'
   cx = cx || ''
 
-  const widthCx = `w-${width}-m w-${width}-l`
+  const widthCx = `w-${width}-l`
 
   return html`
-    <div class='fl-m fl-l ${widthCx} ${cx}'>
-      <div class='ba b--light-gray'>
-        <div class='h5 bg-${color}' async-img='/${resort.slug}.jpg'>
-          <div class='cf tr'>
-            <p class='f-subheadline b bg-black-90 dib white pb2 mv0 pa3'>
+    <a href='/resorts/${resort.slug}'>
+      <div class='fl-l ${widthCx} ${cx} br2'>
+        <div class='ba b--light-gray br2'>
+          <div class='h5 bg-${color} br2 br--top' async-img='/${resort.slug}.jpg'>
+            <div class='cf tr'>
+              <p class='f1 b bg-gray dib white pb2 mv0 pa3 br2 br--top' style='border-top-left-radius: 0;'>
+                ${resort.snowfall24}"
+              </p>
+            </div>
+          </div>
+          <div class='dt w-100 bb b--light-gray bg-near-white black'>
+            <span class='dtc w-33 tc pa3'>
               ${resort.snowfall24}"
-            </p>
+            </span>
+            <span class='dtc w-33 tc pa3'>
+              ${resort.temp}° F
+            </span>
+            <span class='dtc w-34 tc pa3'>
+              ${resort.weather}
+            </span>
+          </div>
+          <div class='bg-white pa3 br2 br--bottom black'>
+            <p class='f5 b mv0'>${resort.name}</p>
+            <p class='f6 mid-gray mv0'>${resort.city}, ${resort.state}</p>
           </div>
         </div>
-        <div class='cf bg-white pa3'>
-          <div class='fl-l'>
-            <a href='/resorts/${resort.slug}' class='link black'>
-              <p class='f5 b mv0'>${resort.name}</p>
-              <p class='f6 mid-gray mv0'>${resort.city}, ${resort.state}</p>
-            </a>
-          </div>
-          <div class='fr-l ba b--light-gray br2'>
-            <p class='f6 mid-gray b mv0 pa2 tc tl-m tl-l'>
-              <span class='pa2 pr3'>
-                ${resort.temp}° F
-              </span>
-              <span class='bl b--light-gray pl3 pa2'>
-                ${resort.weather}
-              </span>
-            </p>
-          </div>
-        </div>
+        <script>${resort.slug && 'if (window.asyncImg) window.asyncImg()'}</script>
       </div>
-      <script>${resort.slug && 'if (window.asyncImg) window.asyncImg()'}</script>
-    </div>
+    </a>
   `
 }
