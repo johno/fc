@@ -1,6 +1,8 @@
 const html = require('choo/html')
 const titleize = require('titleize')
+
 const item = require('../elements/resort-list-item')
+const footer = require('../elements/footer')
 
 module.exports = (state, prev, send) => {
   const { params } = state
@@ -29,6 +31,7 @@ module.exports = (state, prev, send) => {
       <ul class='list pl0 mt0'>
         ${resorts.map(item)}
       </ul>
+      ${footer()}
     </main>
   `
 }
