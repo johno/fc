@@ -67,7 +67,7 @@ module.exports = (state, prev, send) => {
         </div>
       </div>
       <div class='pa4 tc pb3 h4'>
-        <a href='/states/${resort.state.toLowerCase()}' class='ttu tracked pv3 ph4 mid-gray br2 ba b--light-gray link'>More from ${resort.state}</a>
+        <a href='/states/${resort.state.toLowerCase()}' class='ttu tracked pv3 ph4 mid-gray br2 ba b--light-gray link hover-bg-near-white'>More from ${resort.state}</a>
       </div>
     </main>
   `

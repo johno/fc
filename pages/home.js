@@ -24,7 +24,7 @@ module.exports = (state, prev, send) => {
         </div>
       </div>
       <div class='pa4 tc pb3 h4'>
-        <a href='/resorts' class='ttu tracked pv3 ph4 mid-gray br2 ba b--light-gray link'>Discover More</a>
+        <a href='/resorts' class='ttu tracked pv3 ph4 mid-gray br2 ba b--light-gray link hover-bg-near-white'>Discover More</a>
       </div>
       ${footer()}
     </main>
