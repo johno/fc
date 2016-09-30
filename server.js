@@ -48,7 +48,7 @@ module.exports = async function (req, res) {
 const html = (app, state, css) => (`
   <!DOCTYPE html>
   <head>
-    <title>First Chair</title>
+    <title>First Chair - The new way to track snowfall</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">

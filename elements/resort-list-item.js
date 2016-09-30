@@ -6,7 +6,7 @@ module.exports = resort => (
       <div class='cf'>
         <div class='fl w-50 mt3'>
           <p class='f4 mt4'>
-            <a href='/resorts/${resort.slug}' class='black link dim'>
+            <a href='/resorts/${resort.slug}' class='black link dim' title='${resort.name}'>
               ${resort.name} <br>
               <span class='f5 mid-gray'>${resort.city}</span><br>
               <span class='f5 mid-gray'>

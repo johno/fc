@@ -9,9 +9,9 @@ module.exports = (resort, { width, color, cx }) => {
   const widthCx = `w-${width}-l`
 
   return html`
-    <div class='fl-l ${widthCx} ${cx} br2'>
+    <div class='fl-l ${widthCx} ${cx} br2' aria-gridcell="true">
       <div class='ba b--light-gray br2'>
-        <a href='/resorts/${resort.slug}'>
+        <a href='/resorts/${resort.slug}' title='${resort.name}'>
           <div class='h5 bg-${color} br2 br--top' async-img='/${resort.slug}.jpg'>
             <div class='cf tr'>
               <p class='f1 b bg-gray dib white pb2 mv0 pa3 br2 br--top' style='border-top-left-radius: 0;'>
