@@ -5,13 +5,13 @@ const resortTile = require('../elements/resort-tile')
 
 module.exports = (state, prev, send) => {
   return html`
-    <main>
+    <main role="main">
       <header class='tc pv2 pv4-m pv4-l bb b--light-gray'>
         <span class='f-subheadline mid-gray'>≙</span>
         <h1 class='f3 mid-gray'>First Chair</h1>
         <h2 class='f4 mid-gray normal'>The new way to track snowfall</h2>
       </header>
-      <div class='pa2 mw8 center'>
+      <div class='pa2 mw8 center' aria-grid="true">
         <h3 class='f5 ttu tracked normal ph2 ph4-m'>Featured</h3>
         <div class='cf ph2 ph4-m'>
           ${resortTile(state.resorts[0], { width: 60 })}
