@@ -40,7 +40,6 @@ module.exports = async function (req, res) {
     res.writeHead(200)
 
     const appHtml = html(app.toString(req.url, state), state, css)
-    console.log(appHtml)
 
     res.end(zlib.gzipSync(appHtml))
   }
