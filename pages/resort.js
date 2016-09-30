@@ -13,7 +13,7 @@ module.exports = (state, prev, send) => {
             <a href='/' class='f3 mid-gray link'><span class='lh-copy'>≙</span></a>
           </div>
           <div class='dtc v-mid pl2'>
-            <span class='f5 pr1'>Resorts</span>
+            <a href='/all/' class='f5 black link pr1'>Resorts</a>
             <span class='gray'>/</span>
           </div>
           <div class='dtc v-mid pl2'>
