@@ -15,12 +15,41 @@ Fast. Minimal. Tiny. Accessible.
 
 I hope to have a proof of concept working in time to submit to [10k Apart](https://a-k-apart.com/).
 
+#### Installation and usage
+
+###### Install dependencies
+
+```
+npm i
+```
+
+###### Run production
+
+```
+npm start
+```
+
+###### Run the dev server
+
+```
+npm run serve:dev
+```
+
+###### Run uncss
+
+When you have the development server running, run the following command in another tab:
+
+```
+npm i -g uncss
+./scripts/css.sh
+```
+
 #### Todo
 
 - [ ] a11y linting
 - [ ] aria attributes
-- [ ] resort index page with state filtering
-- [ ] design resort page
+- [X] resort index page with state filtering
+- [X] design resort page
 - [ ] graph snowfall
 - [ ] resort search feature
 - [ ] resort favoriting
