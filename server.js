@@ -56,14 +56,14 @@ const html = (app, state, css) => (`
   <body>
     <div id="ssr">${app}</div>
     ${jsScript()}
-    <script>
+    <script type="text/javascript">
       window.rehydrationState = ${JSON.stringify(state)}
 
       window.asyncImg = () => {
         const asyncImgs = [].slice.call(document.querySelectorAll('[async-img]'))
 
         asyncImgs.forEach(el => {
-          el.style = 'background: url(' + el.getAttribute('async-img') + ') no-repeat; background-size: cover;'
+          el.style.cssText = 'background: url(' + el.getAttribute('async-img') + ') no-repeat; background-size: cover;'
         })
       }
     </script>
@@ -72,8 +72,8 @@ const html = (app, state, css) => (`
 const jsScript = () => {
   if (isProd) {
     return `
-    <script async async-js-src="/i.js"></script>
-    <script>
+    <meta async-js-src="/i.js">
+    <script type="text/javascript">
       const jsScripts = [].slice.call(document.querySelectorAll('[async-js-src]'))
       jsScripts.forEach(el => {
         const tag = document.createElement('script')
