@@ -5,7 +5,6 @@
   "scripts": {
     "start": "npm run serve",
     "lint": "standard --verbose | snazzy",
-    "preserve": "NODE_ENV=production npm run build",
     "preserve:dev": "npm run build",
     "serve": "NODE_ENV=production node server.js",
     "serve:dev": "node server.js",
