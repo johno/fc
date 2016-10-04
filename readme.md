@@ -13,7 +13,11 @@ In practice, this requires progressively enhancing the page after load and inlin
 
 Fast. Minimal. Tiny. Accessible.
 
-I hope to have a proof of concept working in time to submit to [10k Apart](https://a-k-apart.com/).
+#### a-k-apart
+
+This proof of concept was submitted to [10k Apart](https://a-k-apart.com/).
+Though, the server code was slightly modified since their node build doesn't support `async`/`await` (see #23).
+There's a branch that uses `http` directly rather than `micro` and is called [no-async](https://github.com/johnotander/fc/tree/no-async).
 
 #### Installation and usage
 
