@@ -1,4 +1,4 @@
-const { send } = require('micro')
+const http = require('http')
 const app = require('./app')
 const fs = require('fs')
 const zlib = require('zlib')
@@ -10,7 +10,7 @@ const js = fs.readFileSync('dist/index.js', 'utf8')
 const css = fs.readFileSync(cssFile, 'utf8')
 const state = { resorts: require('./resorts.json') }
 
-module.exports = async function (req, res) {
+http.createServer((req, res) => {
   console.log(req.url)
 
   if (req.url === '/i.js') {
@@ -33,7 +33,8 @@ module.exports = async function (req, res) {
     res.end(zlib.gzipSync(css))
   } else if (req.url === '/resorts.json') {
     res.setHeader('Content-Type', 'application/json; charset=utf-8')
-    send(res, 200, state)
+    res.writeHead(200)
+    res.end(JSON.stringify(state))
   } else {
     res.setHeader('Content-Encoding', 'gzip')
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
@@ -43,7 +44,7 @@ module.exports = async function (req, res) {
 
     res.end(zlib.gzipSync(appHtml))
   }
-}
+}).listen(3000)
 
 const html = (app, state, css) => (`
   <!DOCTYPE html>

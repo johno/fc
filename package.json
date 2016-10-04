@@ -7,15 +7,14 @@
     "lint": "standard --verbose | snazzy",
     "preserve": "NODE_ENV=production npm run build",
     "preserve:dev": "npm run build",
-    "serve": "NODE_ENV=production micro -p 3000 server.js",
-    "serve:dev": "micro -p 3000 server.js",
+    "serve": "NODE_ENV=production node server.js",
+    "serve:dev": "node server.js",
     "build": "mkdir -p dist && browserify client.js -t envify -g unassertify -g yo-yoify -g es2040 -g uglifyify -p bundle-collapser/plugin > dist/index.js",
     "test": "npm run lint"
   },
   "dependencies": {
     "choo": "^3.3.0",
     "emojiweather": "0.1.0-beta.1",
-    "micro": "^6.0.2",
     "titleize": "^1.0.0"
   },
   "devDependencies": {
